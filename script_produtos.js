@@ -6,6 +6,8 @@ if (!produtos) {
     location.reload();
 }
 
+// Função pra renderizar a tabela
+
 for (let index = 0; index < produtos.length; index++) {
     const produto = produtos[index];
     const linha = `
@@ -66,7 +68,7 @@ function editarprodutos(id) {
 function apagarprodutos(id) {
     Swal.fire({
         title: "Tem certeza?",
-        text: "Você não poderá desfazer está ação",
+        text: "Você não poderá desfazer está ação.",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
