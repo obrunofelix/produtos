@@ -84,8 +84,7 @@ function apagarprodutos(id) {
 }
 
 const formulario_inserir = document.getElementById("inserir");
-
-formulario_inserir.addEventListener("submit", (event) => {
+formulario_inserir.onsubmit = function(event) {
     event.preventDefault();
     const quantidadeDigitada = document.getElementById("Quantidade-inserir").value;
     const descricaoDigitada = document.getElementById("Descricao-inserir").value;
@@ -105,7 +104,7 @@ formulario_inserir.addEventListener("submit", (event) => {
     produtos.push(produtoAdd);
     localStorage.setItem('produtos', JSON.stringify(produtos));
     location.reload();
-});
+};
 
 function procuraProdutoByNome(nomeDigitado) {
     const produtos = JSON.parse(localStorage.getItem("produtos"));
